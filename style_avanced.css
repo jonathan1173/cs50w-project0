@@ -1,0 +1,104 @@
+:root {
+    --color1: #000;
+    --color2: #fff;
+    --color3: #aaffb1;
+    /* Colores secundarios */
+    --Scolor1: #fff5;
+    --Scolor2: #0005;
+
+    --letra1: 30px;
+    --letra2: 24px;
+    --letra3: 12px;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color2);
+}
+
+.header {
+    border-bottom: 1px solid var(--color1);
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_title {
+    font-size: 25px;
+    padding-inline: 20px;
+}
+.nav_links{
+    display: flex;
+    align-items: center;
+    padding-inline: 40px;
+    gap: 10px;
+}
+.nav_link {
+    border: 1px solid var(--color2);
+    border-radius: 15px;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--color1);
+    transition: all 0.1s;
+}
+
+.nav_link:hover {
+    background-color: var(--Scolor2);
+}
+
+.header_title {
+    padding-inline: 50px;
+    color: red;
+}
+
+/* Formularios */
+.form {
+    padding: 10px 0;
+    margin-left: 50px;
+    display: flex;
+    border-bottom: 1px solid var(--color1);
+    width: 950px;
+}
+
+.form_text {
+    width: 200px;
+}
+
+.form_text, .form_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+h3 {
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.input, .form__select {
+    width: 400px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.boton_enviar {
+    width: 650px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton_enviar > input {
+    margin: 20px;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: var(--color3);
+    cursor: pointer;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Búsqueda Avanzada</title>
+    <link rel="stylesheet" href="style_avanced.css" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header_nav">
+        <h1 class="nav_title">Google</h1>
+        <div class="nav_links">
+          <a class="nav_link" href="index.html">Inicio</a>
+          <a class="nav_link" href="image.html">Imágenes</a>
+          <image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="" height="24" width="24" style="border:none;display:none \9"></image>
+        </div>
+      </nav>
+      <h2 class="header_title">Búsqueda Avanzada</h2>
+    </header>
+
+    <h3>Mostrar páginas que contengan..</h3>
+
+    <form class="" action="https://www.google.com/search" method="get">
+      <div class="form">
+        <div class="form_text">
+          <label for="all_words">Todas estas palabras:</label>
+          <label for="exact_phrase">Esta palabra o frase exacta:</label>
+          <label for="any_words">Cualquiera de estas palabras:</label>
+          <label for="none_words">Ninguna de estas palabras:</label>
+        </div>
+
+        <div class="form_input">
+          <input class="input" type="text" name="as_q" id="all_words" />
+          <input class="input" type="text" name="as_epq" id="exact_phrase" />
+          <input class="input" type="text" name="as_oq" id="any_words" />
+          <input class="input" type="text" name="as_eq" id="none_words" />
+        </div>
+      </div>
+
+     
+      <div class="form">
+        <div class="form_text">
+          <label for="language">Idioma:</label>
+          <label for="last_update">Última actualización:</label>
+          <label for="site">Sitio o dominio:</label>
+          <label for="file_type">Tipo de archivo:</label>
+          <label for="terms">Términos que aparecen:</label>
+        </div>
+
+        <div class="form_input">
+          <select class="form__select" id="language" name="lr">
+            <option value="">Cualquiera</option>
+            <option value="lang_en">Inglés</option>
+            <option value="lang_es">Español</option>
+          </select>
+
+          <select class="form__select" id="last_update" name="as_qdr">
+            <option value="all">En cualquier momento</option>
+            <option value="h">Última hora</option>
+            <option value="d">Últimas 24 horas</option>
+            <option value="w">Última semana</option>
+            <option value="m">Último mes</option>
+            <option value="y">Último año</option>
+          </select>
+
+          <input class="input" type="text" id="site" name="as_sitesearch" />
+
+          <select class="form__select" id="file_type" name="as_filetype">
+            <option value="">Cualquier formato</option>
+            <option value="pdf">PDF</option>
+            <option value="doc">DOC</option>
+            <option value="ppt">PPT</option>
+            <!-- Agrega más opciones según necesites -->
+          </select>
+
+          <select class="form__select" id="terms" name="as_occt">
+            <option value="any">En cualquier lugar de la página</option>
+            <option value="title">En el título de la página</option>
+            <option value="url">En la URL de la página</option>
+            <option value="links">En los enlaces a la página</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="boton_enviar">
+        <input type="submit" value="Búsqueda Avanzada" />
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search image</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" type="image/x-icon">
+
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">inicio</a>
+      <a href="avanzada.html">avanzada</a>
+    </header>
+
+    <form class="form" action="https://www.google.com/search">
+      <div class="form_image_content">
+        <img
+          class="form_image"
+          src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp"
+          alt=""
+        />
+        <p class="form_title">imagenes</p>            
+    </div>
+
+      <input class="form_input" type="text" name="q" placeholder="Buscar" />
+      <!-- tbm significa To Be Modified -->
+      <input type="hidden" name="tbm" value="isch" />
+    </form>
+  </body>
+</html>
