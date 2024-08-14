@@ -1,5 +1,4 @@
 :root{
-    --color1: #aaa;
     --color2: #000;
     --color3: #aaffb1;
     /* colores segundarios  */
@@ -18,37 +17,71 @@ body{
     font-family: Arial, sans-serif;
 }
 /* cabecera  */
-.header{
+.header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color1);
-    height: 6%;
-    border-bottom: var(--colorS1) 1px solid;
+    align-items: center;
+    margin-inline: 20px;
+    height: 50px;
 }
-header>a{
-    margin: 5px ;
-    border: var(--colorS2) 2px solid;
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav_link {
     border-radius: 15px;
-    padding: 10px 20px;
-    width: 50px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px ;
+}
+.nav_perfil{
+    background-color: blueviolet;
+    border-radius: 100%;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
-    font-size: var(--letra3);
-    text-decoration: none;
-    color: var(--colorS2);
 }
-header>a:hover{
-    background-color: #000;
-    color: var(--color1);
-    transition: all 0.4s;
+
+.nav_link:hover{
+    background-color: #3335;
+    text-decoration: underline;
+
 }
+
+.nav_perfil--activate{
+    height: 30px;
+    width: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 100%;
+}
+.nav_perfil--activate:hover{
+    background-color: #3335;
+}
+.title {
+    color: #ff1111;
+    padding: 5px 50px;
+    margin-bottom:50px ;
+    border-bottom: #000 solid 1px;
+}
+
+
+
+
 
 /* main */
 
 .form{
-    background-color: var(--color1);
     height:94%;
     display: flex;
     justify-content: flex-start;
@@ -71,12 +104,12 @@ header>a:hover{
 }
 .form_title{
     position: absolute;
-    color:var(--color1);
     font-size: var(--letra2);
     bottom: 0;
     right: 0;
     margin-right: 15px;
     text-transform: uppercase;
+    color: #fff;
 }
 
 .form_input{
@@ -91,4 +124,17 @@ header>a:hover{
     border-radius: 5px;    
 }
 
+/* enlaces direectos  */
 
+.enlaces_directos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.enlaces_directos:hover{
+    background-color: #3335;
+    text-decoration: underline;
+}

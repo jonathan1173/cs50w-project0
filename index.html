@@ -4,28 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>search</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-
     <header class="header">
-      <a href="image.html">imagenes</a>
-      <a href="avanzada.html">avanzada</a>
+      <nav class="header_nav">
+        <a class="nav_link" href="image.html">Imagenes</a>
+        <a class="nav_link" href="avanzada.html">Avanzada</a>
+        <div class="nav_perfil--activate">
+          <img
+            class="nav_img"
+            style="width: 24px"
+            src="https://cdn-icons-png.flaticon.com/512/17/17704.png"
+            alt=""
+          />
+        </div>
+        <div class="nav_perfil--activate">
+          <p class="nav_perfil">J</p>
+        </div>
+      </nav>
     </header>
 
     <form class="form" action="https://www.google.com/search">
-      
       <div class="form_image_content">
         <img
           class="form_image"
           src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp"
           alt=""
         />
-    </div>
+      </div>
 
-        <input class="form_input" type="text" name="q" placeholder="Buscar"  />
-
-      </form>
+      <input class="form_input" type="text" name="q" placeholder="Buscar" />
+      <div class="enlaces_directos">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4574/4574849.png"
+          alt=""
+          style="height:50px ;"
+        />
+        <p>Acceso directo</p>
+      </div>
+    </form>
   </body>
 </html>

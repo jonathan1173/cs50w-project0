@@ -1,7 +1,9 @@
 :root {
     --color1: #000;
     --color2: #fff;
-    --color3: #aaffb1;
+    --color3: #ff1111;
+    --color4: #44f;
+
     /* Colores secundarios */
     --Scolor1: #fff5;
     --Scolor2: #0005;
@@ -16,52 +18,79 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--color2);
+    font-family: Arial, sans-serif;
 }
 
 .header {
-    border-bottom: 1px solid var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 20px;
+    height: 50px;
 }
 
 .header_nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.nav_title {
-    font-size: 25px;
-    padding-inline: 20px;
-}
-.nav_links{
-    display: flex;
-    align-items: center;
-    padding-inline: 40px;
     gap: 10px;
 }
+
 .nav_link {
-    border: 1px solid var(--color2);
     border-radius: 15px;
     padding: 5px;
     text-decoration: none;
-    color: var(--color1);
-    transition: all 0.1s;
+    font-size: 18px ;
+}
+.nav_perfil{
+    background-color: blueviolet;
+    border-radius: 100%;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav_link:hover {
-    background-color: var(--Scolor2);
+.nav_link:hover{
+    background-color: #3335;
+    text-decoration: underline;
+
 }
 
-.header_title {
-    padding-inline: 50px;
-    color: red;
+.nav_perfil--activate{
+    height: 30px;
+    width: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 100%;
 }
+.nav_perfil--activate:hover{
+    background-color: #3335;
+}
+.title {
+    color: #ff1111;
+    padding: 5px 50px;
+    margin-bottom:50px ;
+    border-bottom: #000 solid 1px;
+}
+
+
+
 
 /* Formularios */
+.content_form{
+    border-bottom: #000 solid 1px ;
+}
+
 .form {
     padding: 10px 0;
     margin-left: 50px;
     display: flex;
-    border-bottom: 1px solid var(--color1);
     width: 950px;
 }
 
@@ -69,7 +98,8 @@ body {
     width: 200px;
 }
 
-.form_text, .form_input {
+.form_text,
+.form_input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,7 +111,8 @@ h3 {
     padding-left: 50px;
 }
 
-.input, .form__select {
+.input,
+.form__select {
     width: 400px;
     height: 30px;
     padding: 5px;
@@ -95,10 +126,13 @@ h3 {
     justify-content: flex-end;
 }
 
-.boton_enviar > input {
+.boton_enviar>input {
     margin: 20px;
     border-radius: 3px;
     padding: 10px;
-    background-color: var(--color3);
+    background-color: var(--color4);
     cursor: pointer;
+}
+.boton_enviar>input:hover{
+    background-color: #44fd;
 }

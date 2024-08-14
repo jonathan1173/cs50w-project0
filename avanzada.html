@@ -13,20 +13,27 @@
   </head>
   <body>
     <header class="header">
+      <h1 class="header_title">Google</h1>
       <nav class="header_nav">
-        <h1 class="nav_title">Google</h1>
-        <div class="nav_links">
-          <a class="nav_link" href="index.html">Inicio</a>
-          <a class="nav_link" href="image.html">Imágenes</a>
-          <image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="" height="24" width="24" style="border:none;display:none \9"></image>
+        <a class="nav_link" href="index.html">Inicio</a>
+        <a class="nav_link" href="image.html">Imagenes</a>
+        <div class="nav_perfil--activate">
+          <img class="nav_img" style="width: 24px" src="https://cdn-icons-png.flaticon.com/512/17/17704.png" alt="" />
+
+        </div>
+        <div class="nav_perfil--activate">
+
+          <p class="nav_perfil">J</p>
+
         </div>
       </nav>
-      <h2 class="header_title">Búsqueda Avanzada</h2>
     </header>
 
-    <h3>Mostrar páginas que contengan..</h3>
+    <div class="title">
+      <h2>Busqueda Avanzada</h2>
+    </div>
 
-    <form class="" action="https://www.google.com/search" method="get">
+    <form class="content_form" action="https://www.google.com/search" method="get">
       <div class="form">
         <div class="form_text">
           <label for="all_words">Todas estas palabras:</label>
@@ -43,7 +50,8 @@
         </div>
       </div>
 
-     
+      <div style="height: 0px; border-bottom: 1px solid #000; margin: 40px;"></div>
+
       <div class="form">
         <div class="form_text">
           <label for="language">Idioma:</label>
@@ -91,6 +99,9 @@
       <div class="boton_enviar">
         <input type="submit" value="Búsqueda Avanzada" />
       </div>
+
+     
     </form>
+
   </body>
 </html>
