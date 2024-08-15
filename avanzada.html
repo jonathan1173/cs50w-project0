@@ -42,77 +42,106 @@
             <legend class="content-form__legend">
                 <label class="content-form__label" for="all_words">Todas estas palabras:</label>
                 <input class="content-form__input" type="text" name="as_q" id="all_words" />
-                <span class="content-form__description" for="all_words">Todas estas palabras:</span>
+                <span class="content-form__description" for="all_words">Ingresa las palabras importantes: Terrier ratonero tricolor .
+                </span>
             </legend>
     
             <legend class="content-form__legend">
                 <label class="content-form__label" for="exact_phrase">Esta palabra o frase exacta:</label>
                 <input class="content-form__input" type="text" name="as_epq" id="exact_phrase" />
-                <span class="content-form__description" for="exact_phrase">Esta palabra o frase exacta:</span>
+                <span class="content-form__description" for="exact_phrase">Ingresa las palabras exactas entre comillas: "Terrier ratonero" .
+                </span>
             </legend>
     
             <legend class="content-form__legend">
                 <label class="content-form__label" for="any_words">Cualquiera de estas palabras:</label>
                 <input class="content-form__input" type="text" name="as_oq" id="any_words" />
-                <span class="content-form__description" for="any_words">Cualquiera de estas palabras:</span>
+                <span class="content-form__description" for="any_words">Ingresa OR entre las palabras que desees: En miniatura OR estándar .
+                </span>
             </legend>
     
             <legend class="content-form__legend">
                 <label class="content-form__label" for="none_words">Ninguna de estas palabras:</label>
                 <input class="content-form__input" type="text" name="as_eq" id="none_words" />
-                <span class="content-form__description" for="none_words">Ninguna de estas palabras:</span>
+                <span class="content-form__description" for="none_words">Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -"Jack Russell" .</span>
             </legend>
         </div>
     </div>
     
-      <div class="content-form__separator" style="height: 0px; border-bottom: 1px solid #000; "></div>
+      <div class="content-form__separator" ></div>
     
-      <!-- <div class="content-form__section">
-        <div class="content-form__text">
-          <label class="content-form__label" for="language">Idioma:</label>
-          <label class="content-form__label" for="last_update">Última actualización:</label>
-          <label class="content-form__label" for="site">Sitio o dominio:</label>
-          <label class="content-form__label" for="file_type">Tipo de archivo:</label>
-          <label class="content-form__label" for="terms">Términos que aparecen:</label>
-        </div>
-    
+      <div class="content-form__section">  
         <div class="content-form__inputs">
-          <select class="content-form__select" id="language" name="lr">
-            <option value="">Cualquiera</option>
-            <option value="lang_en">Inglés</option>
-            <option value="lang_es">Español</option>
-          </select>
-    
-          <select class="content-form__select" id="last_update" name="as_qdr">
-            <option value="all">En cualquier momento</option>
-            <option value="h">Última hora</option>
-            <option value="d">Últimas 24 horas</option>
-            <option value="w">Última semana</option>
-            <option value="m">Último mes</option>
-            <option value="y">Último año</option>
-          </select>
-    
-          <input class="content-form__input" type="text" id="site" name="as_sitesearch" />
-    
-          <select class="content-form__select" id="file_type" name="as_filetype">
-            <option value="">Cualquier formato</option>
-            <option value="pdf">PDF</option>
-            <option value="doc">DOC</option>
-            <option value="ppt">PPT</option>
-          </select>
-    
-          <select class="content-form__select" id="terms" name="as_occt">
-            <option value="any">En cualquier lugar de la página</option>
-            <option value="title">En el título de la página</option>
-            <option value="url">En la URL de la página</option>
-            <option value="links">En los enlaces a la página</option>
-          </select>
+
+
+          <div class="content-form__fieldset">
+            <div class="content-form__wrapper">
+              <label class="content-form__field-label" for="language">Idioma:</label>
+              <select class="content-form__select" id="language" name="lr">
+                <option value="">Cualquiera</option>
+                <option value="lang_en">Inglés</option>
+                <option value="lang_es">Español</option>
+              </select>
+              <span class="content-form__description">Busca páginas en el idioma que seleccionas.</span>
+            </div>
+          </div>
+      
+          <div class="content-form__fieldset">
+            <div class="content-form__wrapper">
+              <label class="content-form__field-label" for="last_update">Última actualización:</label>
+              <select class="content-form__select" id="last_update" name="as_qdr">
+                <option value="all">En cualquier momento</option>
+                <option value="h">Última hora</option>
+                <option value="d">Últimas 24 horas</option>
+                <option value="w">Última semana</option>
+                <option value="m">Último mes</option>
+                <option value="y">Último año</option>
+              </select>
+              <span class="content-form__description">Busca páginas publicadas en una región determinada.</span>
+            </div>
+          </div>
+      
+          <div class="content-form__fieldset">
+            <div class="content-form__wrapper">
+              <label class="content-form__field-label" for="site">Sitio o dominio:</label>
+              <input class="content-form__input" type="text" id="site" name="as_sitesearch" />
+              <span class="content-form__description">Realiza búsquedas en un sitio (como wikipedia.org ) o restringe los resultados a un dominio como .edu, .org o .gov.</span>
+            </div>
+          </div>
+      
+          <div class="content-form__fieldset">
+            <div class="content-form__wrapper">
+              <label class="content-form__field-label" for="file_type">Tipo de archivo:</label>
+              <select class="content-form__select" id="file_type" name="as_filetype">
+                <option value="">Cualquier formato</option>
+                <option value="pdf">PDF</option>
+                <option value="doc">DOC</option>
+                <option value="ppt">PPT</option>
+              </select>
+              <span class="content-form__description">Busca páginas del formato que prefieras.</span>
+            </div>
+          </div>
+      
+          <div class="content-form__fieldset">
+            <div class="content-form__wrapper">
+              <label class="content-form__field-label" for="terms">Términos que aparecen:</label>
+              <select class="content-form__select" id="terms" name="as_occt">
+                <option value="any">En cualquier lugar de la página</option>
+                <option value="title">En el título de la página</option>
+                <option value="url">En la URL de la página</option>
+                <option value="links">En los enlaces a la página</option>
+              </select>
+              <span class="content-form__description">Busca términos en toda la página, en su título o en su dirección web, o vínculos que te dirijan a la página que estás buscando.</span>
+            </div>
+          </div>
+
         </div>
       </div>
-     -->
-      <!-- <div class="content-form__submit">
+      
+    
+      <div class="content-form__submit">
         <input class="content-form__button" type="submit" value="Búsqueda Avanzada" />
-      </div> -->
+      </div>
     </form>
     
  

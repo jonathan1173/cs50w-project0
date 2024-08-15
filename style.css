@@ -80,12 +80,34 @@ body {
     justify-content: center; 
     align-items: center; 
     height: 200px;
+    position: relative;
+}
+
+.main-content__bgr {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #000;
+    height: 100%; 
+    width: 500px; 
+    border-radius: 10px;
+    position: relative; 
 }
 
 .main-content__logo {
-    width: 400px;
-    box-sizing: border-box;
+    max-width: 100%; 
+    height: auto; 
 }
+
+.main-content__text {
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+    font-size: 30px;
+    color: white; 
+}
+
+
 /* barra de busqueda  */
 .search-form__input-main {
     display: flex;
@@ -133,17 +155,18 @@ body {
         justify-content: space-between;
     }
 
-    .header__profile {
-        height: 25px;
-        width: 25px;
-    }
 
-    .main-content__logo {
+    .main-content__bgr {
         width: 300px;
+        height: 150px;
+    }
+    .main-content__text{
+        top: 90px;
+        font-size: 25px;
     }
 
     .search-form__input {
         height: 30px;
-        width: 300px;
+        width: 280px;
     }
 }
