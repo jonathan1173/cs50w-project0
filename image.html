@@ -3,45 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>search image</title>
+    <title>Search</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" type="image/x-icon">
-
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-
     <header class="header">
-      <nav class="header_nav">
-        <a class="nav_link" href="index.html">Inicio</a>
-        <a class="nav_link" href="avanzada.html">Avanzada</a>
-        <div class="nav_perfil--activate">
-          <img class="nav_img" style="width: 24px" src="https://cdn-icons-png.flaticon.com/512/17/17704.png" alt="" />
-
+      <nav class="header__nav">
+        <div class="header__nav-container">
+          <a class="header__nav-link" href="index.html">Search Google</a>
+          <a class="header__nav-link" href="image.html">Images</a>
+          <a class="header__nav-link" href="avanzada.html">Search Advanced</a>
         </div>
-        <div class="nav_perfil--activate">
 
-          <p class="nav_perfil">J</p>
-
+        <div class="header__menu">
+          <img
+            class="header__menu-img"
+            src="https://cdn-icons-png.flaticon.com/512/17/17704.png"
+            alt="Profile"
+          />
+          <p class="header__profile">J</p>
         </div>
+        
       </nav>
     </header>
 
-    
-    <form class="form" action="https://www.google.com/search">
-      <div class="form_image_content">
-        <img
-          class="form_image"
-          src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp"
-          alt=""
-        />
-        <p class="form_title">imagenes</p>            
+    <div class="main-content">
+      <img
+        class="main-content__logo"
+        src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp"
+        alt="Google Logo"
+      />
     </div>
 
-      <input class="form_input" type="text" name="q" placeholder="Buscar" />
-      <!-- tbm significa To Be Modified -->
-      <input type="hidden" name="tbm" value="isch" />
-    </form>
+    <form class="search-form" action="https://www.google.com/search" method="GET">
+      <div class="search-form__input-main">
+        <div class="search-form__input-container">
+          <input class="search-form__input" type="text" name="q" placeholder="Buscar" />
+          <input type="hidden" name="tbm" value="isch" />
+          <img
+            class="search-form__icon"
+            src="https://cdn.icon-icons.com/icons2/2642/PNG/512/google_mic_logo_icon_159335.png"
+            alt="Google Icon"
+          />
+          <img
+            class="search-form__icon"
+            src="https://planetafacil.plenainclusion.org/wp-content/uploads/2022/09/1366_2000.png"
+            alt="Google Lens Icon"
+          />
+        </div>
+      </div>
 
-
+      <div class="search-form__buttons">
+        <input class="search-form__button" type="submit" value="Search Google" />
+      </div>
+    </form> 
+    
   </body>
 </html>

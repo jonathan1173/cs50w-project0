@@ -13,62 +13,77 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header_title">Google</h1>
-      <nav class="header_nav">
-        <a class="nav_link" href="index.html">Inicio</a>
-        <a class="nav_link" href="image.html">Imagenes</a>
-        <div class="nav_perfil--activate">
-          <img class="nav_img" style="width: 24px" src="https://cdn-icons-png.flaticon.com/512/17/17704.png" alt="" />
-
+      <nav class="header__nav">
+        <div class="header__nav-container">
+          <a class="header__nav-link" href="index.html">Search Google</a>
+          <a class="header__nav-link" href="image.html">Images</a>
+          <a class="header__nav-link" href="avanzada.html">Search Advanced</a>
         </div>
-        <div class="nav_perfil--activate">
 
-          <p class="nav_perfil">J</p>
-
+        <div class="header__menu">
+          <img
+            class="header__menu-img"
+            src="https://cdn-icons-png.flaticon.com/512/17/17704.png"
+            alt="Profile"
+          />
+          <p class="header__profile">J</p>
         </div>
+        
       </nav>
     </header>
 
-    <div class="title">
+    <div class="sub_header ">
       <h2>Busqueda Avanzada</h2>
     </div>
 
-    <form class="content_form" action="https://www.google.com/search" method="get">
-      <div class="form">
-        <div class="form_text">
-          <label for="all_words">Todas estas palabras:</label>
-          <label for="exact_phrase">Esta palabra o frase exacta:</label>
-          <label for="any_words">Cualquiera de estas palabras:</label>
-          <label for="none_words">Ninguna de estas palabras:</label>
+    <form class="content-form" action="https://www.google.com/search" method="get">
+      <div class="content-form__section">
+        <div class="content-form__group">
+            <legend class="content-form__legend">
+                <label class="content-form__label" for="all_words">Todas estas palabras:</label>
+                <input class="content-form__input" type="text" name="as_q" id="all_words" />
+                <span class="content-form__description" for="all_words">Todas estas palabras:</span>
+            </legend>
+    
+            <legend class="content-form__legend">
+                <label class="content-form__label" for="exact_phrase">Esta palabra o frase exacta:</label>
+                <input class="content-form__input" type="text" name="as_epq" id="exact_phrase" />
+                <span class="content-form__description" for="exact_phrase">Esta palabra o frase exacta:</span>
+            </legend>
+    
+            <legend class="content-form__legend">
+                <label class="content-form__label" for="any_words">Cualquiera de estas palabras:</label>
+                <input class="content-form__input" type="text" name="as_oq" id="any_words" />
+                <span class="content-form__description" for="any_words">Cualquiera de estas palabras:</span>
+            </legend>
+    
+            <legend class="content-form__legend">
+                <label class="content-form__label" for="none_words">Ninguna de estas palabras:</label>
+                <input class="content-form__input" type="text" name="as_eq" id="none_words" />
+                <span class="content-form__description" for="none_words">Ninguna de estas palabras:</span>
+            </legend>
         </div>
-
-        <div class="form_input">
-          <input class="input" type="text" name="as_q" id="all_words" />
-          <input class="input" type="text" name="as_epq" id="exact_phrase" />
-          <input class="input" type="text" name="as_oq" id="any_words" />
-          <input class="input" type="text" name="as_eq" id="none_words" />
+    </div>
+    
+      <div class="content-form__separator" style="height: 0px; border-bottom: 1px solid #000; "></div>
+    
+      <!-- <div class="content-form__section">
+        <div class="content-form__text">
+          <label class="content-form__label" for="language">Idioma:</label>
+          <label class="content-form__label" for="last_update">Última actualización:</label>
+          <label class="content-form__label" for="site">Sitio o dominio:</label>
+          <label class="content-form__label" for="file_type">Tipo de archivo:</label>
+          <label class="content-form__label" for="terms">Términos que aparecen:</label>
         </div>
-      </div>
-
-      <div style="height: 0px; border-bottom: 1px solid #000; margin: 40px;"></div>
-
-      <div class="form">
-        <div class="form_text">
-          <label for="language">Idioma:</label>
-          <label for="last_update">Última actualización:</label>
-          <label for="site">Sitio o dominio:</label>
-          <label for="file_type">Tipo de archivo:</label>
-          <label for="terms">Términos que aparecen:</label>
-        </div>
-
-        <div class="form_input">
-          <select class="form__select" id="language" name="lr">
+    
+        <div class="content-form__inputs">
+          <select class="content-form__select" id="language" name="lr">
             <option value="">Cualquiera</option>
             <option value="lang_en">Inglés</option>
             <option value="lang_es">Español</option>
           </select>
-
-          <select class="form__select" id="last_update" name="as_qdr">
+    
+          <select class="content-form__select" id="last_update" name="as_qdr">
             <option value="all">En cualquier momento</option>
             <option value="h">Última hora</option>
             <option value="d">Últimas 24 horas</option>
@@ -76,18 +91,17 @@
             <option value="m">Último mes</option>
             <option value="y">Último año</option>
           </select>
-
-          <input class="input" type="text" id="site" name="as_sitesearch" />
-
-          <select class="form__select" id="file_type" name="as_filetype">
+    
+          <input class="content-form__input" type="text" id="site" name="as_sitesearch" />
+    
+          <select class="content-form__select" id="file_type" name="as_filetype">
             <option value="">Cualquier formato</option>
             <option value="pdf">PDF</option>
             <option value="doc">DOC</option>
             <option value="ppt">PPT</option>
-            <!-- Agrega más opciones según necesites -->
           </select>
-
-          <select class="form__select" id="terms" name="as_occt">
+    
+          <select class="content-form__select" id="terms" name="as_occt">
             <option value="any">En cualquier lugar de la página</option>
             <option value="title">En el título de la página</option>
             <option value="url">En la URL de la página</option>
@@ -95,13 +109,12 @@
           </select>
         </div>
       </div>
-
-      <div class="boton_enviar">
-        <input type="submit" value="Búsqueda Avanzada" />
-      </div>
-
-     
+     -->
+      <!-- <div class="content-form__submit">
+        <input class="content-form__button" type="submit" value="Búsqueda Avanzada" />
+      </div> -->
     </form>
-
+    
+ 
   </body>
 </html>

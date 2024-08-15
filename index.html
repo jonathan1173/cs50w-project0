@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>search</title>
+    <title>Search</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="shortcut icon"
@@ -13,41 +13,55 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header_nav">
-        <a class="nav_link" href="image.html">Imagenes</a>
-        <a class="nav_link" href="avanzada.html">Avanzada</a>
-        <div class="nav_perfil--activate">
+      <nav class="header__nav">
+        <div class="header__nav-container">
+          <a class="header__nav-link" href="index.html">Search Google</a>
+          <a class="header__nav-link" href="image.html">Images</a>
+          <a class="header__nav-link" href="avanzada.html">Search Advanced</a>
+        </div>
+
+        <div class="header__menu">
           <img
-            class="nav_img"
-            style="width: 24px"
+            class="header__menu-img"
             src="https://cdn-icons-png.flaticon.com/512/17/17704.png"
-            alt=""
+            alt="Profile"
           />
+          <p class="header__profile">J</p>
         </div>
-        <div class="nav_perfil--activate">
-          <p class="nav_perfil">J</p>
-        </div>
+        
       </nav>
     </header>
 
-    <form class="form" action="https://www.google.com/search">
-      <div class="form_image_content">
-        <img
-          class="form_image"
-          src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp"
-          alt=""
-        />
+    <div class="main-content">
+      <img
+        class="main-content__logo"
+        src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp"
+        alt="Google Logo"
+      />
+    </div>
+
+    <form class="search-form" action="https://www.google.com/search" method="GET">
+      <div class="search-form__input-main">
+        <div class="search-form__input-container">
+          <input class="search-form__input" type="text" name="q" placeholder="Buscar" />
+          <img
+            class="search-form__icon"
+            src="https://cdn.icon-icons.com/icons2/2642/PNG/512/google_mic_logo_icon_159335.png"
+            alt="Google Icon"
+          />
+          <img
+            class="search-form__icon"
+            src="https://planetafacil.plenainclusion.org/wp-content/uploads/2022/09/1366_2000.png"
+            alt="Google Lens Icon"
+          />
+        </div>
       </div>
 
-      <input class="form_input" type="text" name="q" placeholder="Buscar" />
-      <div class="enlaces_directos">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/4574/4574849.png"
-          alt=""
-          style="height:50px ;"
-        />
-        <p>Acceso directo</p>
+      <div class="search-form__buttons">
+        <input class="search-form__button" type="submit" value="Search Google" />
+        <input class="search-form__button" type="submit" name="btnI" value="I'm Feeling Lucky" />
       </div>
-    </form>
+    </form> 
+    
   </body>
 </html>

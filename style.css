@@ -1,140 +1,149 @@
-:root{
-    --color2: #000;
-    --color3: #aaffb1;
-    /* colores segundarios  */
-    --colorS1: #fff5;
-    --colorS2: #000;
+:root {
+    --color1: #000;
+    --color2: #fff;
+    --color3: #ff1111;
+    --color4: #44f;
+    
+    /* Colores opacados */
+    --opac-color1: #0005;
+    --opac-color2: #fff5;
+    --opac-color3: #f115;
+    --opac-color4: #44f5;
 
-    --letra1:30px;
-    --letra2:24px;
-    --letra3:12px;
+    --letra1: 30px;
+    --letra2: 24px;
+    --letra3: 12px;
 }
-body{
-    margin: 0px;
-    padding: 0px;
+
+body {
     box-sizing: border-box;
-    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color2);
     font-family: Arial, sans-serif;
 }
-/* cabecera  */
-.header {
+
+.header__nav, .header__menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-inline: 20px;
-    height: 50px;
+    gap: 10px;
+    margin-inline: 10px;
 }
 
-.header_nav {
+.header__nav-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-.nav_link {
-    border-radius: 15px;
-    padding: 5px;
+.header__nav-link {
+    font-size: 16px;
     text-decoration: none;
-    font-size: 18px ;
+    position: relative;
+    color: var(--color1);
+    border-radius: 5px 5px 0 0;
 }
-.nav_perfil{
-    background-color: blueviolet;
+
+.header__nav-link::after {
+    content: "";
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--color1);
+}
+
+.header__nav-link:hover {
+    background-color: var(--opac-color1);
+}
+
+.header__profile {
+    height: 30px;
+    width: 30px;
+    background-color: #44f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
     border-radius: 100%;
     font-size: 20px;
-    height: 30px;
-    width: 30px;
+}
 
+.header__menu-img {
+    height: 25px;
+}
+/* logo de google  */
+.main-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav_link:hover{
-    background-color: #3335;
-    text-decoration: underline;
-
-}
-
-.nav_perfil--activate{
-    height: 30px;
-    width: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 100%;
-}
-.nav_perfil--activate:hover{
-    background-color: #3335;
-}
-.title {
-    color: #ff1111;
-    padding: 5px 50px;
-    margin-bottom:50px ;
-    border-bottom: #000 solid 1px;
-}
-
-
-
-
-
-/* main */
-
-.form{
-    height:94%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-   
-}
-.form_image{
-    background-color: var(--colorS2);
-    border-radius: 20px;
-    padding: 20px;
-    margin-block: 40px 10px;
+    justify-content: center; 
+    align-items: center; 
     height: 200px;
-    width: 500px;
-    object-fit: cover;
-    
-}
-.form_image_content{
-    position: relative;
-}
-.form_title{
-    position: absolute;
-    font-size: var(--letra2);
-    bottom: 0;
-    right: 0;
-    margin-right: 15px;
-    text-transform: uppercase;
-    color: #fff;
 }
 
-.form_input{
-    border-radius: 15px;
-    height: 35px;
-    width: 600px;
-    margin-block: 10px 10px;
-    padding-inline-start:10px ;
+.main-content__logo {
+    width: 400px;
+    box-sizing: border-box;
 }
-
-.form_submit{
-    border-radius: 5px;    
-}
-
-/* enlaces direectos  */
-
-.enlaces_directos{
+/* barra de busqueda  */
+.search-form__input-main {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 15px;
 }
-.enlaces_directos:hover{
-    background-color: #3335;
-    text-decoration: underline;
+
+.search-form__input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding-inline: 5px;
+    gap: 5px;
+}
+
+.search-form__input {
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 500px;
+}
+
+.search-form__icon {
+    height: 25px;
+}
+
+.search-form__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form__button {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header__nav, .header__menu {
+        justify-content: space-between;
+    }
+
+    .header__profile {
+        height: 25px;
+        width: 25px;
+    }
+
+    .main-content__logo {
+        width: 300px;
+    }
+
+    .search-form__input {
+        height: 30px;
+        width: 300px;
+    }
 }
